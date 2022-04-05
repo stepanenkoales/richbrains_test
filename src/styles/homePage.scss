@@ -1,0 +1,28 @@
+.custom-header {
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 1.7em;
+}
+
+.content {
+    min-height: calc(100vh - 140px);
+    width: 100%;
+    padding-left: 100px;
+}
+
+.ant-card {
+    min-width: 250px;
+}
+
+@media (max-width: 670px) {
+
+    .custom-header {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .content {
+        padding-left: 10px;
+    }
+
+}

@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -10,19 +10,8 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.s(a|c)ss$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: { modules: true }
-          },
-          'sass-loader'
-        ]
-      }, 
-      { // antd
-        use: ['style-loader', 'css-loader'],
-        test: /\.css$/
+        test: /\.(scss|css)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -35,7 +24,7 @@ module.exports = {
   },
   devServer: {
     static: {
-        directory: path.resolve(__dirname, './public'),
+      directory: path.resolve(__dirname, './public'),
     },
   },
-};
+}
