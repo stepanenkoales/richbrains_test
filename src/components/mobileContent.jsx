@@ -1,6 +1,14 @@
 import React from 'react'
 import { CourseCard } from './card'
-import { Col, Row, Button, Dropdown, Menu, Layout, Divider } from 'antd'
+import {
+  Col,
+  Row,
+  Button,
+  Dropdown,
+  Menu,
+  Layout,
+  Divider,
+} from 'antd'
 import { DownOutlined, ReloadOutlined } from '@ant-design/icons'
 
 const { Content } = Layout
@@ -48,7 +56,9 @@ export const MobileContent = (props) => {
               </Row>
             </>
           ) : (
-            <h2 style={{ textAlign: 'center' }}>Please choose your course</h2>
+            <h2 style={{ textAlign: 'center' }}>
+              Please choose your course
+            </h2>
           )}
         </div>
       </Content>

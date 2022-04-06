@@ -5,7 +5,7 @@ import { allCourses } from '../data/courses'
 import Media from 'react-media'
 import { MobileContent } from '../components/mobileContent'
 import { DesktopContent } from '../components/desktopContent'
-import '../styles/homePage.scss'
+import '../styles/homePage.less'
 
 const { Header, Footer } = Layout
 
@@ -21,10 +21,9 @@ export const HomePage = () => {
 
   return (
     <>
-      <Layout style={{ background: '#f0f2f5' }}>
+      <Layout>
         <Header
           style={{
-            background: '#f0f2f5',
             height: '90px',
           }}
         >

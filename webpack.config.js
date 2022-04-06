@@ -10,9 +10,34 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'less-loader',
+            options: {
+              lessOptions: {
+                modifyVars: {
+                  'primary-color': '#0d823e',
+                  'link-color': '#0d823e',
+                  'layout-header-background': '#edfff5',
+                  'layout-body-background': '#edfff5',
+                },
+                javascriptEnabled: true,
+              },
+            },
+          },
+        ],
+      },
+      /* {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
+      }, */
     ],
   },
   resolve: {
